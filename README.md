@@ -56,11 +56,11 @@ First, there is selection bias, since I restricted the data to 2010 onwards only
 Since restricting the data to 2010 onwards was intentional, the scope of the project is limited to modern-era gaming trends rather than overall. To solve the problem of multiple games having their own JSON document, the game can be aggregated into 1, splitting the data appropriately according to console-level.
 
 ### Rationale
-The decision to restrict to post-2009 was to avoid computational overload to be able to stay within the MongoDB Free Tier to reduce monetary costs. The year 2016 served as a logical modern era threshold, and it has data from more standardized tracking methods that games from older eras, especially pre-2010, won't have the benefit of accurate digital records, which will mitigate uncertainty. Converting the CSV to individual JSON documents allows NoSQL logic and use. Uncertainty is mitigated by nesting similar information into 1 document rather than separating by each row in a CSV.
+The decision to restrict to post-2009 was to avoid computational overload to be able to stay within the MongoDB Free Tier to reduce monetary costs. The year 2016 served as a logical modern era threshold, and it has data from more standardized tracking methods that games from older eras, especially pre-2010, won't have the benefit of accurate digital records, which will mitigate uncertainty. Converting the CSV to individual JSON documents allows NoSQL logic and use. Uncertainty is mitigated by nesting similar information into 1 document rather than separating by each row in a CSV. Additionally, to avoid duplication, games with multiple rows because of differences in information, like different consoles, are combined into 1 DOC and split by nesting.
 
 ## Metadata
 ### Implicit Schema
-The top level should contain attributes that remain constant across all versions of 1 game title, including genre, publisher, and developer. At the nested level, it should contain platform-specific information, which is the console machine and total sales associated with it, and what year the game released on that console and the critic rating. All of this forms 1 document.
+The top level should contain attributes that remain constant across all versions of 1 game title, including genre, publisher, and developer. At the nested level, it should contain platform-specific information, which is the console machine and total sales associated with it, and what year the game was released on that console and the critic rating. All of these form 1 document.
 
 ### Data Summary
 |Feature|Count|

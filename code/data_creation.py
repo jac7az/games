@@ -4,7 +4,7 @@ import os
 import shutil
 from google.colab import files
 df = pd.read_csv('Video_Games_Sales_Cleaned.csv')
-df=df[df['release_year']>2015]
+df=df[df['release_year']>2009]
 output_dir = 'game_documents'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)

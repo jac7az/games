@@ -4,7 +4,7 @@
 * DOI:
 * Press Release
 * Pipeline
-* License
+* [
 ## Problem Definition
 
 ## Domain Exposition

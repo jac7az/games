@@ -46,5 +46,11 @@ This project is in the entertainment domain, specifically the video game sector.
 |How Platforms Are Colliding and Why This Will Spark the Next Era of Growth|BCG|https://drive.google.com/file/d/1MfSWHdlpKS12BtIvRTQuTSMnft5AATKo/view?usp=drive_link|Gaming report for 2026, covering new gaming consoles, advancements in technology, new global updates in marketing, advertisement and development tactics|
 |What is Metacritic and Metascore?|Medium|https://drive.google.com/file/d/1sx64SxPrXa7b6Hm9pKirNrqBrRO9xOHY/view?usp=drive_link|Basics of metacritic & metascore, what their importance is and what these measurements imply|
 ## Data Creation
+This data about games was taken from Kaggle 🎮 Video Game Sales & Industry Data from 1980 till 2024. The data contained information about release year, critic rating, total global sales combined across different regions, genre, publisher and console each game can be played on. This data was aggregated to only include games from 2010-2024, then converted from CSV to json documents and downloaded as a zip file. However, the data actually stops at 2020. The json documents were created based on each individual row in the CSV. Each game becomes one document, and the document title uses its index number in the CSV with the game name.
+|Code File|Description|Link to Code|
+|---------|-----------|------------|
+|data_creation.py|code file splitting each game in each row of the csv into a json document|https://github.com/jac7az/games/blob/main/code/data_creation.py|
+
+
 
 ## Metadata

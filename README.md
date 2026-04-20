@@ -1,1 +1,14 @@
-# games
+# DS4320 Project 2: Gamers
+* Executive Summary:
+* Name: Carissa Chen; jac7az
+* DOI:
+* Press Release
+* Pipeline
+* License
+## Problem Definition
+
+## Domain Exposition
+
+## Data Creation
+
+## Metadata

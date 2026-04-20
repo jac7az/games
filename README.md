@@ -50,7 +50,45 @@ This data about games was taken from Kaggle 🎮 Video Game Sales & Industry Dat
 |Code File|Description|Link to Code|
 |---------|-----------|------------|
 |data_creation.py|code file splitting each game in each row of the csv into a json document|https://github.com/jac7az/games/blob/main/code/data_creation.py|
+### Bias Identification
+First, there is selection bias, since I restricted the data to 2010 onwards only, meaning games from 1980 to 2009 will all be missing. All data will favor more modern trends like live-service models and mobile/PC gaming, ignoring the old trends like renting CDs, DS, Game Boys, etc. Additionally, multiple games can appear as different JSON docs because they were released on different consoles, making them weigh more significantly than other games with fewer releases.
 
+Since restricting the data to 2010 onwards was intentional, the scope of the project is limited to modern-era gaming trends rather than overall. To solve the problem of multiple games having their own JSON document, the game can be aggregated into 1, splitting the data appropriately according to console-level.
 
+### Rationale
+The decision to restrict to post-2009 was to avoid computational overload to be able to stay within the MongoDB Free Tier to reduce monetary costs. The year 2016 served as a logical modern era threshold, and it has data from more standardized tracking methods that games from older eras, especially pre-2010, won't have the benefit of accurate digital records, which will mitigate uncertainty. Converting the CSV to individual JSON documents allows NoSQL logic and use. Uncertainty is mitigated by nesting similar information into 1 document rather than separating by each row in a CSV.
 
 ## Metadata
+### Implicit Schema
+The top level should contain attributes that remain constant across all versions of 1 game title, including genre, publisher, and developer. At the nested level, it should contain platform-specific information, which is the console machine and total sales associated with it, and what year the game released on that console and the critic rating. All of this forms 1 document.
+
+### Data Summary
+|Feature|Count|
+|-------|-----|
+|Total Docs|7135|
+|Unique Game Titles|4522|
+|Release Year Range|2010-2020|
+|Most Frequent Genre|Action|
+|Least Frequent Genre|Sandbox|
+|Most Frequent Console|PS3|
+|Least Frequent Console|SAT, GBA, WW|
+|Most Frequent Publisher|Ubisoft|
+|Average Critic Score|7.29|
+
+### Data Dictionary
+|Name|Datatype|Description|Example|
+|----|--------|-----------|-------|
+|title|string|Official game title|"Grand Theft Auto V|
+|console|string|platform hardware|"PS3"|
+|critic_score|float|average review rating|9.4|
+|total_sales|float|global units sold per million|0.24|
+|release year|int|year of release|2013|
+|genre|string|genre type of the game|shooter|
+|publisher|string|company that published the game|Namco Bandai|
+|developer|string|studio that created the game|Konami|
+
+|Feature|Mean|Standard Deviation|Min|Max|Interpretation|
+|-------|----|------------------|---|---|--------------|
+|critic_score|7.287|0.614|1|10|Mostly clustered around mean with low variance, with scores concentrated between 7 and 8
+|total_sales|0.353|0.995|0|20.32|Massive spread from the mean, suggesting high volatility
+|release_year|2013|2.798|2010|2020|Consistent upward trend from 2010 with relative lack of outliers due to pre-filtering.|

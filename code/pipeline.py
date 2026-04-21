@@ -1,3 +1,3 @@
 import os
 
-print(os.environ.get("mongopw"))
+print(os.environ.get("MONGOPW"))

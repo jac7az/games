@@ -11,7 +11,7 @@ logging.basicConfig(
         logging.StreamHandler()                   
     ]
 )
-logging.info("Starting the game data processing script.")
+logging.info("Converting to JSON.")
 
 try:
     df = pd.read_csv('Video_Games_Sales_Cleaned.csv')

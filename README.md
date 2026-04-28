@@ -7,11 +7,11 @@
 * [License](https://github.com/jac7az/games/blob/main/LICENSE)
 ## Problem Definition
 ### Problem Statement
-The general topic is determining if high production quality directly correlates to higher commercial sales in video games. The specific problem statement is whether a high critic score has a stronger influence and serves as a better predictor for total sales across different console generations, or whether brand loyalty is a stronger predictor.
+The general topic is determining if high production quality directly correlates to higher commercial sales in video games. The specific problem statement is whether a high critic score has a strong influence and serves as a useful predictor for total sales across different console generations.
 
-Video games are a newer, booming industry where new titles require high production costs to implement. Understanding return on investment is critical for anyone who wants to get into this industry. This investigation seeks to analyze whether it would be more accurate to find the highest revenue games based more on score or if the market is so saturated by similar genre games that brand recognition is becoming a better factor
+Video games are a newer, booming industry where new titles require high production costs to implement. Understanding return on investment is critical for anyone who wants to get into this industry. This investigation seeks to analyze whether it would be more accurate to find the highest revenue games based more on score, or if the market is so saturated by similar genre games that it's no longer a factor to focus on.
 
-The initial problem isn't clear on what's considered high quality v. low quality. To narrow this down, predicting and modeling sales is used as the proxy to determine what's high v. low quality, using different characteristics and inputs like console, critic score, publisher, developer, etc. to analyze how consumers now make decisions about what games to try and buy.
+The initial problem isn't clear on what's considered high quality v. low quality. To narrow this down, quality uses the critic score as the proxy. By shifting the focus to feature importance, the analysis can provide a closer look at how much influence different characteristics hold to predict overall sales and provide a comparison between the actual quality versus other factors like console or who it's made by.
 
 [Headline]()
 ## Domain Exposition

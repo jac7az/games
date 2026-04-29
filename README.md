@@ -2,8 +2,8 @@
 * Executive Summary:
 * Name: Carissa Chen; jac7az
 * DOI:
-* Press Release
-* Pipeline
+* [Press Release](https://github.com/jac7az/games/blob/main/PressRelease.md)
+* [Pipeline](https://github.com/jac7az/games/tree/main/code)
 * [License](https://github.com/jac7az/games/blob/main/LICENSE)
 ## Problem Definition
 ### Problem Statement
@@ -13,7 +13,7 @@ Video games are a newer, booming industry where new titles require high producti
 
 The initial problem isn't clear on what's considered high quality v. low quality. To narrow this down, quality uses the critic score as the proxy. By shifting the focus to feature importance, the analysis can provide a closer look at how much influence different characteristics hold to predict overall sales and provide a comparison between the actual quality versus other factors like console or who it's made by.
 
-[Headline]()
+[Headline: Beyond A Score - What Actually Drives Video Game Success?](https://github.com/jac7az/games/blob/main/PressRelease.md)
 ## Domain Exposition
 ### Terminology
 |Term|Description|

@@ -20,10 +20,11 @@ uri=f"mongodb+srv://jac7az_db_user:{mongopw}@cluster0.hevn98o.mongodb.net/"
 client=pymongo.MongoClient(uri,server_api=ServerApi('1'))
 try:
     client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
+    logging.info("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
-    print("Failed:",e)
+    logging.error("Failed:",e)
 
+logging.info("Uploading data")
 db=client['game_database']
 games=db['game_data']
 folder='game_documents.zip'
@@ -45,14 +46,13 @@ else:
         if len(batch) >= batch_size:
             try:
                 games.insert_many(batch)
-                print(f"Uploaded {i + 1} records...")
+                logging.info(f"Uploaded {i + 1} records...")
             except Exception as e:
-                print(f"Batch upload failed (likely a giant file): {e}")
-                print("Tip: If this keeps failing, use insert_one instead of insert_many.")
+                logging.error(f"Batch upload failed (likely a giant file): {e}\nTip: If this keeps failing, use insert_one instead of insert_many.")
             batch = []
         if batch:
             games.insert_many(batch)
-            print("insert complete")
+            logging.info("insert complete")
 print(games.find_one())
 # games.delete_many({})
 # print("Collection cleared")

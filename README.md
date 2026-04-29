@@ -1,10 +1,11 @@
 # DS4320 Project 2: Gamers
-* Executive Summary:
 * Name: Carissa Chen; jac7az
 * DOI:
 * [Press Release](https://github.com/jac7az/games/blob/main/PressRelease.md)
 * [Pipeline](https://github.com/jac7az/games/tree/main/code)
 * [License](https://github.com/jac7az/games/blob/main/LICENSE)
+### Executive Summary
+This repository includes a MongoDB nonrelational database containing records for over 4000 video games and analysis designed to evaluate critic score strength by game performance across 10 years, from 2010-2020, including games from a variety of publishers, developers, genres, and consoles. The data was entered as JSON files, with one file per game. This repo also includes metadata explanation and domain exposition, with the structure of the tables, statistical uncertainty for each asset class, and links to resources, press release, and code process.
 ## Problem Definition
 ### Problem Statement
 The general topic is determining if high production quality directly correlates to higher commercial sales in video games. The specific problem statement is whether a high critic score has a strong influence and serves as a useful predictor for total sales across different console generations.

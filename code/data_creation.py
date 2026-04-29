@@ -56,5 +56,7 @@ try:
     shutil.make_archive(output_filename, 'zip', output_dir)
     #files.download(f'{output_filename}.zip')
     logging.info("Successfully created zip folder")
+    shutil.rmtree(output_dir)
+    logging.info(f"Temporary directory {output_dir} removed.")
 except Exception as e:
     logging.error("Failed to create zip folder")

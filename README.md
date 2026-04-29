@@ -35,7 +35,7 @@ The initial problem isn't clear on what's considered high quality v. low quality
 
 This project is in the entertainment domain, specifically the video game sector. This area is a unique combination between not only artistic creativity, but also software engineering. Shelf-life and hype goes by incredibly fast, sometimes within a few days, so understanding relationships between customer, vendor and developers is essential to maximize sales and awareness.
 
-[Link to Reading Materials](https://myuva-my.sharepoint.com/:f:/r/personal/jac7az_virginia_edu/Documents/DS4320%20Project%202/Reading%20Materials?csf=1&web=1&e=zRSVjV)
+[Link to Reading Materials](https://myuva-my.sharepoint.com/:f:/g/personal/jac7az_virginia_edu/IgAUnqDSTWaLRqhAAe5OPsOGAWsVyeiZaIIixJ5oj8ix2t0?e=ClnEaF)
 
 |Title|Publishing Site|Link|Description|
 |-----|---------------|------------------------|-------------------|

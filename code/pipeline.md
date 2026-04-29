@@ -87,5 +87,9 @@ plt.savefig("feature_importance_developer.png")
 plt.show()
 ```
 ## Analysis Rationale
+Used a Random Forest Regressor to capture nonlinear relationships between the features, including interactions between developers, publisher, and critic scores. To avoid having high dimensionality and cardinality from encoding developers, publishers, consoles, and other qualitative variables, developers and publishers used their mean average sales as a proxy for their weight in the market. To find how influential each variable is, Feature Importance was used rather than a different metric because feature importance can directly identify how much each variable contributes to a model predicting sales price, which provides a more relevant answer to the specific problem.
+
+An additional part of the analysis not mentioned in the Press Release is the difference between the developer and publisher. In the visualization without the developer variable, the publisher had the highest feature importance weight, but it was reduced to the lowest when the developer variable was added. This provides an insight into the high collinearity between publisher and developer, where it was actually the developer pushing the publisher's influence up.
 
 ## Visualization Rationale
+A horizontal bar chart was chosen to display feature importance for easy comparison between weights of different variables, using the length of each bar to display how much weight each feature had in the overall prediction of total sales. The data was sorted from highest to lowest influence, matching the visual hierarchy of most to least important. The chart has a simplistic overall look to support easy reading for any end-user who discovers this research, including people with little data background.

@@ -1,5 +1,5 @@
-# DS4320 Project 2: Gamers
-* Name: Carissa Chen; jac7az
+# Gamers
+* Name: Carissa Chen
 * DOI: 10.5281/zenodo.19874511
 * [Press Release](https://github.com/jac7az/games/blob/main/PressRelease.md)
 * [Pipeline](https://github.com/jac7az/games/tree/main/code)
